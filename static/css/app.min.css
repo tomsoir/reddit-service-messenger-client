@@ -1,0 +1,27 @@
+h1 { padding-top: 10px; }
+input[type="file"]{ display: none; }
+.form-control-lg{ padding-left: 0.9rem; }
+
+.center{ text-align: center; }
+.row.center { display: block; padding: 40px 0 0px; }
+.iphone { margin-bottom: 50px; margin-top: -20px; height: 650px; width: 315px; border-radius: 50px; display: inline-block; box-shadow: 0 50px 65px rgba(0, 0, 0, 0.2); position: relative; }
+.iphone svg { margin: 0 0px 0 -4px; }
+.input-group-btn {margin-bottom: 0;}
+.input-group-btn .btn{line-height: 30px;}
+.modal-footer, .modal-header{ border: 0; }
+.subinput-tex { padding-left: 1rem; }
+.preview { position: absolute; border: 1px solid #fff000; }
+
+#notificationWrapper{ border-radius: 3px; top: 77px; left: 16px; right: 17px; bottom: 75px; position: absolute; background: url('background.png') center center no-repeat; background-size: 100% 100%; overflow: hidden; padding: 150px 0 0 0; }
+.notification{ display: block; background: rgba(255,255,255,0.6); border-radius: 10px; color: #000; text-decoration: none; overflow: hidden;transition: all 200ms ease-out; margin: 0 15px 0; max-height: 0; opacity: 0; transform: scale(0); }
+.notification.show{ margin-bottom: 15px; opacity: 1; transform: scale(1); max-height: 120px;}
+.notification.hide{ margin-top: 100px; margin-bottom: 0px; opacity: 0; font-size: 0}
+.notification:hover{ text-decoration: none; color: #000; }
+.notification-header{ background: rgba(255,255,255,0.2); text-align: left; padding: 2px 10px 4px; }
+.notification-header svg { display: inline-block; vertical-align: middle; }
+.notification-title{ font-size: 12px; display: inline-block; vertical-align: middle; text-transform: uppercase; }
+.notification-image{ width: 50px; float: right; margin: 10px 10px; }
+.notification-body { font-size: 12px; line-height: 16px; padding: 5px 10px 6px; text-align: left; }
+
+#createNotification{ background: #0275D8; border: 0; height: 41px; width: 41px; position: absolute; bottom: 20px; left: 136px; border-radius: 50px; outline: none; cursor: pointer; transition: all 200ms ease-out;}
+#createNotification:hover{ background: #5BA6E6; }

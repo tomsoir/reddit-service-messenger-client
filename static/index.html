@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reddit: notifications admin panel</title>
+    <meta charset="utf8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="on" http-equiv="cleartype" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://www.redditstatic.com/mweb2x/favicon/64x64.png" rel="icon shortcut" sizes="64x64" />
+    <link href="https://www.redditstatic.com/mweb2x/favicon/128x128.png" rel="icon shortcut" sizes="128x128" />
+    <link href="https://www.redditstatic.com/mweb2x/favicon/192x192.png" rel="icon shortcut" sizes="192x192" />
+    <link href="https://www.redditstatic.com/mweb2x/favicon/76x76.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="https://www.redditstatic.com/mweb2x/favicon/120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="https://www.redditstatic.com/mweb2x/favicon/152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <link href="https://www.redditstatic.com/mweb2x/favicon/180x180.png" rel="apple-touch-icon" sizes="180x180" />
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/app.min.css" rel="stylesheet" />
+
+    <script src="./js/vendor.js"></script>
+    <script src="./js/vendors.bundle.js"></script>
+    <script src="./js/app.bundle.js"></script>
+  </head>
+  <body>
+
+    <div class="container cover-container">
+      <div class="row center">
+        <svg class="SnooIcon" version="1.1" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 20 20"><g><circle fill="#ff4500" cx="10" cy="10" r="10"></circle><path fill="#fff" d="M16.67,10A1.46,1.46,0,0,0,14.2,9a7.12,7.12,0,0,0-3.85-1.23L11,4.65,13.14,5.1a1,1,0,1,0,.13-0.61L10.82,4a0.31,0.31,0,0,0-.37.24L9.71,7.71a7.14,7.14,0,0,0-3.9,1.23A1.46,1.46,0,1,0,4.2,11.33a2.87,2.87,0,0,0,0,.44c0,2.24,2.61,4.06,5.83,4.06s5.83-1.82,5.83-4.06a2.87,2.87,0,0,0,0-.44A1.46,1.46,0,0,0,16.67,10Zm-10,1a1,1,0,1,1,1,1A1,1,0,0,1,6.67,11Zm5.81,2.75a3.84,3.84,0,0,1-2.47.77,3.84,3.84,0,0,1-2.47-.77,0.27,0.27,0,0,1,.38-0.38A3.27,3.27,0,0,0,10,14a3.28,3.28,0,0,0,2.09-.61A0.27,0.27,0,1,1,12.48,13.79Zm-0.18-1.71a1,1,0,1,1,1-1A1,1,0,0,1,12.29,12.08Z"></path></g></svg>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-6">
+          <!-- Header -->
+          <div class="form-group row has-feedback">
+            <div class="col-lg-1 col-md-1"></div>
+            <div class="col-lg-9 col-md-10"><h1>Senddit</h1></div>
+          </div>
+  
+          <!-- Form -->
+          <form data-toggle="validator" id="myForm" role="form">
+            <div class="form-group row has-feedback">
+              <div class="col-lg-1 col-md-1"></div>
+              <div class="col-lg-10 col-md-10">
+                <input name="inputSubreddit" placeholder="Subreddit link" type="text" pattern="^.*$" class="form-control form-control-lg" required="true" />
+                <small class="subinput-tex">https://www.reddit.com/r/funny/</small>
+              </div>
+            </div>
+
+            <div class="form-group row has-feedback">
+              <div class="col-lg-1 col-md-1"></div>
+              <div class="col-lg-10 col-md-10">
+                <input name="inputPost" placeholder="Post link" type="text" pattern="^.*$" class="form-control form-control-lg" required="true" />
+              </div>
+            </div>
+
+            <div class="form-group row has-feedback">
+              <div class="col-lg-1 col-md-1"></div>
+              <div class="col-lg-10 col-md-10">
+                <input name="inputTitle" placeholder="Head your notification" type="text" pattern="^.*$" class="form-control form-control-lg" required="true" />
+              </div>
+            </div>
+
+            <div class="form-group row has-feedback">
+              <div class="col-lg-1 col-md-1"></div>
+              <div class="col-lg-10 col-md-10">
+                <textarea name="inputBody" placeholder="Describe your notification" pattern="^.*$" rows="5" class="form-control form-control-lg" required="true" /></textarea>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-lg-1 col-md-1"></div>
+              <div class="input-group col-lg-10 col-md-10">
+                  <label class="input-group-btn">
+                      <span class="btn btn-primary">Upload...</span>
+                      <input type="file" id="inputFile" />
+                  </label>
+                  <input name="inputImage" id="inputImage" placeholder="Or insert the image link" type="text" class="form-control" />
+              </div>
+            </div>
+            <br />
+            <div class="form-group center">
+              <button type="submit" class="btn btn-primary btn-lg">Push notification to 312k users...</button><br /><br /><br />
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-6 center">
+          <div class="iphone">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" enable-background="new 0 0 320 652" xml:space="preserve" height="652px" width="320px" > <filter height="200%" width="200%" id="filter-4" filterUnits="objectBoundingBox" y="-50%" x="-50%">   <feMorphology operator="dilate" radius="0.25" result="shadowSpreadOuter1" in="SourceAlpha"/>   <feOffset result="shadowOffsetOuter1" in="shadowSpreadOuter1" dy="0" dx="0"/>   <feGaussianBlur stdDeviation="0.25" result="shadowBlurOuter1" in="shadowOffsetOuter1"/>   <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" in="shadowBlurOuter1"/> </filter> <path id="path-11" fill="#CDCDCD" d="M0.7,90.6c0-5.5,0.4-7.8,0.4-7.8H3l0.7,0.7v24.6l-0.8,0.8l-1.8,0c0,0-0.4-4-0.4-6.1  C0.7,101.4,0.7,91.9,0.7,90.6z"/> <path id="path-9" fill="#CDCDCD" d="M1.5,147.5c0-3.8,0.5-7.8,0.5-7.8h1.5l0.7,0.7v46.8L3.4,188l-1.5,0c0,0-0.4-2.9-0.5-6.1V147.5z"/> <path id="path-7" fill="#CDCDCD" d="M320,145.3c0-3.8-0.5-7.7-0.5-7.7h-1.6l-0.8,0.7v46.6l0.8,0.8l1.6,0c0,0,0.4-2.9,0.5-6.1V145.3z  "/> <path id="path-5" fill="#CDCDCD" d="M1.5,205.2c0-3.8,0.5-7.8,0.5-7.8h1.5l0.7,0.7v46.8l-0.8,0.8l-1.5,0c0,0-0.4-2.9-0.5-6.1V205.2z  "/> <g id="Web-1.1">   <g id="Startpage-1366" transform="translate(-523.000000, -282.000000)"> <g id="Very-White-iPhone" transform="translate(523.000000, 282.000000)">   <g id="Back" transform="translate(2.956120, 0.000000)"> <g id="Silver">   <g> <path id="path-1_1_" fill="#E8E8E8" d="M0,109.7v28.7c0.4,0.4,0.6,1.3,0.7,2.4h0v102.8c0,1.4-0.3,2.7-0.7,3.1v349.2c0,36.2,19.3,55.5,55.5,55.5h0.7c0.9-0.4,2.6-0.7,4.5-0.7s3.6,0.3,4.5,0.7h73.8c0.8-0.4,2.4-0.7,4.2-0.7c0.1,0,0.2,0,0.4,0l29.6,0c1.6,0,3,0.3,3.8,0.7h83.4c36.2,0,55.5-19.3,55.5-55.5v-409c-0.2-0.2-0.4-0.7-0.6-1.3l-0.2-2.2v-44.7h0c0.1-1.1,0.4-2,0.7-2.4V55.5c0-36.2-19.3-55.5-55.5-55.5H55.5C19.3,0,0,19.3,0,55.5V82c0.4,1.2,0.6,3.8,0.7,4.9h0v17.7C0.7,106.1,0.4,108.7,0,109.7z"/>   </g>   <defs> <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="49.2" width="315.6" height="552.4">   <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/> </filter>   </defs>   <mask maskUnits="userSpaceOnUse" x="0" y="49.2" width="315.6" height="552.4" id="mask-2"> <g filter="url(#Adobe_OpacityMaskFilter)">   <path id="path-1" fill="#FFFFFF" d="M0,109.7v28.7c0.4,0.4,0.6,1.3,0.7,2.4h0v102.8c0,1.4-0.3,2.7-0.7,3.1v349.2 c0,36.2,19.3,55.5,55.5,55.5h0.7c0.9-0.4,2.6-0.7,4.5-0.7s3.6,0.3,4.5,0.7h73.8c0.8-0.4,2.4-0.7,4.2-0.7c0.1,0,0.2,0,0.4,0 l29.6,0c1.6,0,3,0.3,3.8,0.7h83.4c36.2,0,55.5-19.3,55.5-55.5v-409c-0.2-0.2-0.4-0.7-0.6-1.3l-0.2-2.2v-44.7h0 c0.1-1.1,0.4-2,0.7-2.4V55.5c0-36.2-19.3-55.5-55.5-55.5H55.5C19.3,0,0,19.3,0,55.5V82c0.4,1.2,0.6,3.8,0.7,4.9h0v17.7 C0.7,106.1,0.4,108.7,0,109.7z"/> </g>   </mask>   <g id="Antenna-Bands" mask="url(#mask-2)"> <g transform="translate(0.000000, 48.796316)">   <path id="Top-Left" fill="#CBC8CB" d="M0,0.7c0,0,3,0.3,5.2-0.4v8.9C3.1,10.6,0,10.4,0,10.4V0.7z"/>   <path id="Bottom-Left" fill="#D8D8D8" d="M0,542.7c0,0,2.2,0.7,5.2,0.4v9.6c-3,0.3-5.2-0.4-5.2-0.4V542.7z"/>   <path id="Top-Right" fill="#D8D8D8" d="M310.4,0.7c0,0,3,0.3,5.2-0.4v8.9c-2.1,1.3-5.2,1.1-5.2,1.1V0.7z"/>   <path id="Bottom-Right" fill="#D8D8D8" d="M310.4,542.7c0,0,2.2,0.7,5.2,0.4v9.6c-3,0.3-5.2-0.4-5.2-0.4V542.7z"/> </g>   </g> </g> <path id="Lighting" fill="#F2F2F2" d="M257.2,4.4c36.6,0,53.9,17.3,53.9,53.9v535.3c0,36.6-17.3,53.9-53.9,53.9H58.3  c-36.6,0-53.9-17.3-53.9-53.9V58.4c0-36.7,17.3-53.9,53.9-53.9H257.2z"/> <g id="Glass">   <g filter="url(#filter-4)"> <path id="path-3_2_" d="M256.8,7.4c36.6,0,51.4,14.8,51.4,51.5v534.4c0,36.7-14.8,51.5-52.9,51.5H58.8c-35.9,0-51.4-14.8-51.4-50.7V58.9c0-36.7,14.8-51.5,51.4-51.5H256.8z"/>   </g>   <g> <path id="path-3_1_" fill="#FFFFFF" d="M256.8,7.4c36.6,0,51.4,14.8,51.4,51.5v534.4c0,36.7-14.8,51.5-52.9,51.5H58.8c-35.9,0-51.4-14.8-51.4-50.7V58.9c0-36.7,14.8-51.5,51.4-51.5H256.8z"/>   </g> </g>   </g>   <g id="Camera-" transform="translate(104.942263, 35.857899)"> <ellipse id="Border" fill="#E8E8E8" cx="5.2" cy="5.2" rx="5.2" ry="5.2"/>   </g>   <path id="Home-Button-" fill="none" stroke="#EDEDED" d="M185.5,609.2c0-13.9-11.2-25.1-25.1-25.1c-13.9,0-25.1,11.3-25.1,25.1 s11.2,25.1,25.1,25.1C174.2,634.4,185.5,623.1,185.5,609.2z M138.2,609.2c0-12.2,9.9-22.2,22.2-22.2c12.2,0,22.2,9.9,22.2,22.2 s-9.9,22.2-22.2,22.2C148.1,631.4,138.2,621.5,138.2,609.2z"/>   <ellipse id="Sensor-" fill="#E8E8E8" cx="160.7" cy="20" rx="3.7" ry="3.7"/>   <path id="Speaker-" fill="#E8E8E8" d="M136,41c0,1.2,1,2.2,2.2,2.2h45.1c1.2,0,2.2-1,2.2-2.2c0-1.2-1-2.2-2.2-2.2h-45.1 C137,38.8,136,39.8,136,41z"/>   <g id="Volume-Down-Button" transform="translate(0.739030, 197.403277)"> <g id="Rectangle-9" transform="translate(2.098847, 24.158911) scale(-1, 1) translate(-2.098847, -24.158911) ">   <path id="path-5_1_" fill="#CDCDCD" fill-opacity="2.000000e-02" d="M3.5,7.8C3.5,4,3,0,3,0H1.5L0.7,0.7v46.8l0.8,0.8l1.5,0   c0,0,0.4-2.9,0.5-6.1V7.8z"/> </g> </g> <g id="Lock-Button" transform="translate(318.500000, 162.016890) scale(-1, 1) translate(-318.500000, -162.016890) translate(317.000000, 137.516890)"> <g id="Rectangle-9_1_" transform="translate(1.478060, 24.028489) scale(-1, 1) translate(-1.478060, -24.028489) ">   <path id="path-7_1_" fill="#CDCDCD" fill-opacity="2.000000e-02" d="M3,7.7C3,4,2.4,0,2.4,0H0.8L0,0.7v46.6l0.8,0.8l1.6,0   c0,0,0.4-2.9,0.5-6.1V7.7z"/> </g>   </g>   <g id="Volume-Up-Button" transform="translate(0.739030, 139.734904)"> <g id="Rectangle-9_2_" transform="translate(2.098847, 24.158911) scale(-1, 1) translate(-2.098847, -24.158911) ">   <path id="path-9_1_" fill="#CDCDCD" fill-opacity="2.000000e-02" d="M3.5,7.8C3.5,4,3,0,3,0H1.5L0.7,0.7v46.8l0.8,0.8l1.5,0   c0,0,0.4-2.9,0.5-6.1V7.8z"/> </g>   </g>   <g id="Silent-Button" transform="translate(0.000000, 82.805869)"> <g id="Rectangle-9_3_" transform="translate(2.217090, 13.068839) scale(-1, 1) translate(-2.217090, -13.068839) ">   <path id="path-11_1_" fill="#CDCDCD" fill-opacity="2.000000e-02" d="M3.7,7.8C3.7,2.3,3.3,0,3.3,0H1.5L0.7,0.7v24.6l0.8,0.8   l1.8,0c0,0,0.4-4,0.4-6.1C3.7,18.6,3.7,9.1,3.7,7.8z"/> </g>   </g>   <g id="Screen" transform="translate(19.953811, 76.891164)"> <path id="Border_1_" fill="#737373" d="M0,495.1c0,2.5,0.5,3,3,3h276c2.5,0,3-0.5,3-3V3.1c0-2.5-0.5-3-3-3H3c-1.8,0-3,0.5-3,3  V495.1z"/>   </g> </g>   </g> </g> </svg> 
+            <div id="notificationWrapper"></div>
+            <button id="createNotification"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container cover-container center">
+      <p><small>© Channels team &#10084;</small></p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body center">Are you sure?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">No, I have bad filling about this</button>
+            <button type="button" class="btn btn-primary" id="modalOkButton">Yes, let's spam begins!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal -->
+  </body>
+</html>
